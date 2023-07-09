@@ -14,7 +14,7 @@ const CurrencyDropDown = () => {
         <div className='alert alert-success'>
                 <select className="custom-select" id="inputGroupSelect01" onChange={(event) => setCurrency(event.target.value)}>
                     <option value="$" name="Dollar">$ Dollar</option>
-                    <option value="£" name="Pound">£ Pound</option>
+                    <option defaultValue value="£" name="Pound">£ Pound</option>
                     <option value="€" name="Euro">€ Euro</option>
                     <option value="₹" name="Ruppee">₹ Ruppee</option>
                 </select>

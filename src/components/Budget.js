@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
 const Budget = () => {
-    const { budget, dispatch, expenses } = useContext(AppContext);
+    const { budget, dispatch, currency, expenses } = useContext(AppContext);
     const setBudget = (value) => {
         if (value > 200000) alert("Budget cannot be greater than 200000");
         const totalExpenses = expenses.reduce((total, item) => {
@@ -19,7 +19,7 @@ const Budget = () => {
     }
     return (
         <div className='alert alert-secondary'>
-            <span>Budget: <input
+            <span>Budget: {currency}<input
                 type='number'
                 id='budget'
                 value={budget}
